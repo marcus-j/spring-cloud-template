@@ -1,6 +1,6 @@
 spring:
   application:
-    name: greetingservice
+    name: zuulservice
   profiles:
     active: default
   cloud:

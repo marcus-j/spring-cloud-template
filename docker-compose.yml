@@ -1,0 +1,37 @@
+version: '3'
+services:
+  config-service:
+    container_name: config-service
+    image: cloud-template/config-service:latest
+    ports:
+     - "8888:8888"
+  eureka-service:
+    container_name: eureka-service
+    image: cloud-template/eureka-service:latest
+    ports:
+     - "8761:8761"
+  zuul-service:
+    container_name: zuul-service
+    image: cloud-template/zuul-service:latest
+    ports:
+     - "5555:5555"
+  greeting-service-1:
+    container_name: greeting-service-1
+    image: cloud-template/greeting-service:latest
+    ports:
+     - "8080:8080"
+  greeting-service-2:
+    container_name: greeting-service-2
+    image: cloud-template/greeting-service:latest
+    ports:
+     - "8081:8080"
+  news-service-1:
+    container_name: news-service-1
+    image: cloud-template/news-service:latest
+    ports:
+     - "8082:8080"
+  news-service-2:
+    container_name: news-service-2
+    image: cloud-template/news-service:latest
+    ports:
+     - "8083:8080"
